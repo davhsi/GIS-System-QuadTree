@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>City Locator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Quad Tree GIS</h1>
+        <div id="map-container"></div>
+        <div id="controls">
+            <div class="input-group">
+                <input type="text" id="city-name" placeholder="Enter city name">
+                <button id="locate-btn">Locate</button>
+            </div>
+            <div class="input-group">
+                <button id="delete-btn">Delete</button>
+            </div>
+            <div class="input-group">
+                <label for="x-coord">X:</label>
+                <input type="number" id="x-coord">
+                <label for="y-coord">Y:</label>
+                <input type="number" id="y-coord">
+                <input type="text" id="new-city-name" placeholder="Enter city name">
+                <button id="add-btn">Add City</button>
+            </div>
+        </div>
+    </div>
+    <div id="city-list"></div>
+    <script src="quadtree.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

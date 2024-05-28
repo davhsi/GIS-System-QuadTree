@@ -1,0 +1,124 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f5f5;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+}
+
+#map-container {
+    width: 100%;
+    height: 600px;
+    background: #ffffff;
+    border: 2px solid #3498db;
+    border-radius: 15px;
+    position: relative;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#controls {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    flex-grow: 1;
+}
+
+#controls input[type="text"], 
+#controls input[type="number"] {
+    padding: 12px 15px;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    margin-right: 10px;
+    background: #ecf0f1;
+    color: #333333;
+    flex-grow: 1;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+#controls input[type="text"]:focus, 
+#controls input[type="number"]:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+#controls button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #3498db;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 16px;
+}
+
+#controls button:hover {
+    background: #2980b9;
+}
+
+#city-list {
+    width: 100%;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.city-marker {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: green;
+    border-radius: 50%;
+    color: black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.city-marker:hover {
+    transform: scale(1.2);
+}
+
+.city-label {
+    position: absolute;
+    font-size: 14px;
+    background-color: #3498db;
+    padding: 5px 8px;
+    border-radius: 6px;
+    pointer-events: none;
+    transform: translate(-50%, -120%);
+    white-space: nowrap;
+    color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
